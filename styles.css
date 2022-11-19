@@ -29,14 +29,18 @@ header {
   align-items: center;
   text-align: center;
 }
-#grid > a {
-  width: 200px;
-  size: 50px;
-}
 #grid #buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-left: 30%;
+}
+#grid button {
+  height: 100px;
+  width: 100px;
+  background-image: linear-gradient(red, red, white, white);
+  font-family: "Press Start 2P", cursive;
+  border-radius: 50%;
+  padding: 4px;
 }
 
 #enemyPokemon {
@@ -56,4 +60,17 @@ footer {
 }
 footer p {
   font-size: 8pt;
+}
+
+#battlefield {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aa15ff7d-d333-4bf9-b115-95e18f63fe91/d5ynr9c-33aeebd0-1cd8-45d9-86fc-8431aa114534.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FhMTVmZjdkLWQzMzMtNGJmOS1iMTE1LTk1ZTE4ZjYzZmU5MVwvZDV5bnI5Yy0zM2FlZWJkMC0xY2Q4LTQ1ZDktODZmYy04NDMxYWExMTQ1MzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.drpgYmhn1x05leYjcLxQtnSJDwKa_DciUUDi4-LYJXA);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+button {
+  padding: 20px;
+  font-family: "Press Start 2P", cursive;
+  background-color: rgba(127, 255, 212, 0.487);
 }/*# sourceMappingURL=styles.css.map */
