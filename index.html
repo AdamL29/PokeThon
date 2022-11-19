@@ -10,39 +10,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Pokemon Battle</title>
 </head>
 <body>
     <header>
         <h1>Choose your POKéMON...</h1>
-        <h4>Every journey begins with a choice.</h4>
+        <h4>Every journey begins with a <span id="redText">choice</span>.</h4>
     </header>
         
     <div id="grid">
-        <div>
+        <div id="pokemon1">
             <h2>Eevee</h2>
-            <img id="Eevee" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" alt="Pokemon Eevee">
-            <button>Select</button>
+            <img id="eevee" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" alt="Pokemon Eevee">
+            <span id="buttons">
+                <a class="selection" href="/battle.html"><button id="select">Select</button></a>
+            </span>
         </div>
 
-        <div>
+        <div id="pokemon2">
             <h2>Pikachu</h2>
-            <img id="Pikachu" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pokemon Pikachu">
-            <button>Select</button>
+            <img id="pikachu" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pokemon Pikachu">
+            <span id="buttons">
+                <a class="selection" href="/battle.html"><button>Select</button></a>
+            </span>
         </div>
 
-        <div>
+        <div id="pokemon3">
             <h2>Cyndaquil</h2>
-            <img id="Cyndaquil" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/155.png" alt="Pokemon Cyndaquil">
-            <button>Select</button>
+            <img id="cyndaquil" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/155.png" alt="Pokemon Cyndaquil">
+            <span id="buttons">
+                <a class="selection" href="/battle.html"><button>Select</button></a>
+            </span>
         </div>
     </div>
     
 </body>
+    
     <footer>
-        <div>
-            We do not carry the right to these images.
-        </div>
+        <p>We do not carry the right to these images.</p> 
     </footer>
 </html>

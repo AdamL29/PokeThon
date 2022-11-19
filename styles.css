@@ -1,0 +1,59 @@
+html {
+  font-family: "Press Start 2P", cursive;
+  /* background-image:url(https://i.gifer.com/D7OZ.gif); */
+  background-image: url(https://media1.giphy.com/media/FpUcEs9flCUW3e2q5I/200w.gif?cid=6c09b952q7hkyolk6hrn1i8cq4mtb87x84y3ed5bagebkwze&rid=200w.gif&ct=g);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+#Mew {
+  height: 300px;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#redText {
+  color: red;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+#grid > a {
+  width: 200px;
+  size: 50px;
+}
+#grid #buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 30%;
+}
+
+#enemyPokemon {
+  display: grid;
+  justify-items: end;
+}
+
+#selectedPokemon {
+  display: grid;
+  align-items: end;
+}
+
+footer {
+  display: grid;
+  justify-items: center;
+  margin-top: 100px;
+}
+footer p {
+  font-size: 8pt;
+}/*# sourceMappingURL=styles.css.map */
