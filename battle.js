@@ -1,22 +1,37 @@
-// attack buttons need to subtract health when clicked
+// tackle attack needs to -30 to health when clicked
 function tackleAttack(){
-// first, user clicks attack (need to Add Event Listener on page)
-// computer health decreased
-
-// if computer health <=0 then user wins
-// otherwise computer enemy attacks
-// user health decreases
-// if user health <=0 then computer wins
-// otherwise user clicks attack and REPEAT
+    // first, user clicks attack (need to Add Event Listener on page)
+    let enemyHealth = enemyPoke.health;
+    let userHealth = selection.health;
+    // Attack so enemy health decreases
+    // if computer health <=0 then user wins
+    if(enemyHealth <= 0){
+        document.body.insertAdjacentHTML("afterbegin", `<h1>CONGRATULATIONS</h1>`)
+    } else {
+    // otherwise computer enemy attacks
+        userHealth - 40;
+    // user health decreases
+    }
+    // if user health <=0 then computer wins
+    if (userHealth <= 0) {
+        document.body.insertAdjacentHTML("afterbegin", "<h1>FAINTED</h1>")    
+    }
+    // otherwise user clicks attack and REPEAT
 }
 
-// make functions for each attack? 
+// thunder attack needs to -120 to health when clicked
 function thunderAttack(){
     
 }
 
+// flame attack needs to -80 to health when clicked
 function flameAttack(){
 
+}
+
+// rest needs to +50 to health when clicked
+function rest(){
+    
 }
 
 let selectionJson = Cookies.get(`pokemonSelection`);
@@ -30,8 +45,13 @@ let enemyPoke = {
     attackOptions: [`Tackle`, `Psychic`, `Psybeam`, `Rest`]
 }
 
+// inserting selected pokemon character into battle
 document.getElementById(`charSelect`).insertAdjacentHTML(`afterbegin`, `<h2>${selection.name} </h2>`);
 document.getElementById(`charSelect`).insertAdjacentHTML(`afterbegin`, `<img src="${selection.img}" alt="Pokemone Eevee"</>`);
 document.getElementById(`charSelect`).insertAdjacentHTML(`afterbegin`, `<h3>${selection.health} </h3>`);
 
-// need to add event listener to the Attack buttons:
+// event listeners for attack & rest buttons
+document.getElementById(`tackle`).addEventListener(`click`, tackleAttack);
+document.getElementById(`thunder`).addEventListener(`click`, thunderAttack);
+document.getElementById(`flamethrower`).addEventListener(`click`, flameAttack);
+document.getElementById(`rest`).addEventListener(`click`, rest);

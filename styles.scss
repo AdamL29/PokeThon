@@ -12,6 +12,18 @@ html{
     height: 100%;
 }
 
+// #homeHeader{
+//     margin-top: 4%;
+//     h1{
+//         font-size: 3em;
+//         padding: 10px;
+//     }
+//     h4{
+//         font-size: 2em;
+//         padding-top: 10px;
+//     }
+// }
+
 img{
     height: 50vh;
 }
@@ -25,6 +37,12 @@ header{
     justify-items: center;
     align-items: center;
     margin-bottom: 25px;
+    >h1{
+        padding-bottom: 20px;
+    }
+    >h4{
+        padding-bottom: 20px;
+    }
 }
 
 #redText{
@@ -71,8 +89,8 @@ footer{
 
 #battlefield{
     background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aa15ff7d-d333-4bf9-b115-95e18f63fe91/d5ynr9c-33aeebd0-1cd8-45d9-86fc-8431aa114534.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FhMTVmZjdkLWQzMzMtNGJmOS1iMTE1LTk1ZTE4ZjYzZmU5MVwvZDV5bnI5Yy0zM2FlZWJkMC0xY2Q4LTQ1ZDktODZmYy04NDMxYWExMTQ1MzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.drpgYmhn1x05leYjcLxQtnSJDwKa_DciUUDi4-LYJXA);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 button{
@@ -85,9 +103,16 @@ button{
     display: grid;
     grid-template-columns: 1fr 1fr;
     #buttons{
-        margin-left: 50%;
+        margin-left: 60%;
+        margin-top: 10%;
     }
 }
 
+#battleheader{
+    display: grid;
+    padding-left: 1%;
+}
 
-
+#enemyPokemon{
+    margin-right: 5%;
+}
