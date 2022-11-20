@@ -5,32 +5,19 @@
 
 html{
     font-family: 'Press Start 2P', cursive;
-    /* background-image:url(https://i.gifer.com/D7OZ.gif); */
     background-image: url(https://media1.giphy.com/media/FpUcEs9flCUW3e2q5I/200w.gif?cid=6c09b952q7hkyolk6hrn1i8cq4mtb87x84y3ed5bagebkwze&rid=200w.gif&ct=g);
     background-size: cover;
     background-position: center;
     height: 100%;
 }
 
-// #homeHeader{
-//     margin-top: 4%;
-//     h1{
-//         font-size: 3em;
-//         padding: 10px;
-//     }
-//     h4{
-//         font-size: 2em;
-//         padding-top: 10px;
-//     }
-// }
-
 img{
     height: 50vh;
-}
+    }
 
 #Mew{
     height: 30vh;
-}
+    }
 
 header{
     display: grid;
@@ -38,10 +25,11 @@ header{
     align-items: center;
     margin-bottom: 25px;
     >h1{
-        padding-bottom: 20px;
+        padding-bottom: 30px;
+        padding-top: 40px;
     }
     >h4{
-        padding-bottom: 20px;
+        padding-bottom: 40px;
     }
 }
 
@@ -71,11 +59,13 @@ header{
 #enemyPokemon{
     display: grid;
     justify-items: end;
+    padding-right: 50px;
 }
 
 #selectedPokemon{
     display: grid;
     align-items: end;
+    padding-left: 50px;
 }
 
 footer{
@@ -104,15 +94,18 @@ button{
     grid-template-columns: 1fr 1fr;
     #buttons{
         margin-left: 60%;
-        margin-top: 10%;
+        // margin-top: 10%;
     }
 }
 
 #battleheader{
     display: grid;
-    padding-left: 1%;
-}
+    >a{
+        padding-top: 40px;
+    }
+
 
 #enemyPokemon{
-    margin-right: 5%;
+    margin-right: 6%;
+    }
 }

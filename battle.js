@@ -3,14 +3,24 @@ function tackleAttack(){
     // first, user clicks attack (need to Add Event Listener on page)
     let enemyHealth = enemyPoke.health;
     let userHealth = selection.health;
-    // Attack so enemy health decreases
-    // if computer health <=0 then user wins
+    // We attack so enemy health decreases
+    let remainEHealth = enemyHealth - 30;
+    // return remainEHealth
+    if (remainEHealth > 0){
+        console.log(`What happened?`);
+    }
+    return remainEHealth
+};
+
+function attackmove(){
+    // if (computer health is less than or equal to 0 then user wins);
+    let enemyHealth = remainEHealth;
     if(enemyHealth <= 0){
         document.body.insertAdjacentHTML("afterbegin", `<h1>CONGRATULATIONS</h1>`)
     } else {
     // otherwise computer enemy attacks
         userHealth - 40;
-    // user health decreases
+        // user health decreases
     }
     // if user health <=0 then computer wins
     if (userHealth <= 0) {
@@ -55,3 +65,9 @@ document.getElementById(`tackle`).addEventListener(`click`, tackleAttack);
 document.getElementById(`thunder`).addEventListener(`click`, thunderAttack);
 document.getElementById(`flamethrower`).addEventListener(`click`, flameAttack);
 document.getElementById(`rest`).addEventListener(`click`, rest);
+
+
+let enemyHealth = enemyPoke.health;
+let userHealth = selection.health;
+let remainEHealth = enemyHealth - 30;
+document.getElementById(`health`).insertAdjacentHTML(`beforeend`, `<p>${remainEHealth}</p>`);
