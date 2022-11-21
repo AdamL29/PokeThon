@@ -18,24 +18,24 @@ function choiceHandler(event){
 
 
 let pokemon1 = {
-    name: `Eevee`,
+    name: `EEVEE`,
     img: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png`,
     health: 200,
-    attackOptions: [`Tackle`, `Thunder`, `Flamethrower`, `Rest`]
+    attackOptions: [`Tackle`, `Thunder`, `Flamethrower`, `Quick Attack`]
 }
 
 let pokemon2 = {
-    name: `Pikachu`,
+    name: `PIKACHU`,
     img: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png`,
     health: 200,
-    attackOptions: [`Tackle`, `Thunder`, `Flamethrower`, `Rest`]
+    attackOptions: [`Tackle`, `Thunder`, `Flamethrower`, `Quick Attack`]
 }
 
 let pokemon3 = {
-    name: `Cyndaquil`,
+    name: `CYNDAQUIL`,
     img: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/155.png`,
     health: 200,
-    attackOptions: [`Tackle`, `Thunder`, `Flamethrower`, `Rest`]
+    attackOptions: [`Tackle`, `Thunder`, `Flamethrower`, `Quick Attack`]
 }
 
 let selection1 = document.getElementById(`pokemon1`);

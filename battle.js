@@ -1,73 +1,110 @@
 // tackle attack needs to -30 to health when clicked
 function tackleAttack(){
     // first, user clicks attack (need to Add Event Listener on page)
-    let enemyHealth = enemyPoke.health;
-    let userHealth = selection.health;
     // We attack so enemy health decreases
-    let remainEHealth = enemyHealth - 30;
-    // return remainEHealth
-    if (remainEHealth > 0){
+    enemyHealth = enemyHealth - 30;
+    HTag.innerText = `${enemyHealth}`;
+    if (enemyHealth > 0){
         console.log(`What happened?`);
+        userHealth = userHealth - 40;
+        // setTimeout(attackUser, 2000);
+    } else if (enemyHealth <= 0){
+        HTag.innerText = `FAINTED`;
+        console.log(`Fainted`);
     }
-    return remainEHealth
+    return enemyHealth
 };
 
-function attackmove(){
-    // if (computer health is less than or equal to 0 then user wins);
-    let enemyHealth = remainEHealth;
-    if(enemyHealth <= 0){
-        document.body.insertAdjacentHTML("afterbegin", `<h1>CONGRATULATIONS</h1>`)
-    } else {
-    // otherwise computer enemy attacks
-        userHealth - 40;
-        // user health decreases
-    }
-    // if user health <=0 then computer wins
-    if (userHealth <= 0) {
-        document.body.insertAdjacentHTML("afterbegin", "<h1>FAINTED</h1>")    
-    }
-    // otherwise user clicks attack and REPEAT
-}
+// user attacked, wait 2 seconds show new health, 
+
+// enemy attacks, wait 2 seconds show new health, 
+// before next choice
 
 // thunder attack needs to -120 to health when clicked
 function thunderAttack(){
-    
+    // first, user clicks attack (need to Add Event Listener on page)
+    // We attack so enemy health decreases
+    enemyHealth = enemyHealth - 120;
+    HTag.innerText = `${enemyHealth}`;
+    if (enemyHealth > 0){
+        console.log(`What happened?`);
+    } else if (enemyHealth <= 0){
+        HTag.innerText = `FAINTED`;
+        console.log(`Fainted`);
+    }
+    return enemyHealth
 }
 
-// flame attack needs to -80 to health when clicked
+// flamethrower attack needs to -80 to health when clicked
 function flameAttack(){
-
+    // first, user clicks attack (need to Add Event Listener on page)
+    // We attack so enemy health decreases
+    enemyHealth = enemyHealth - 80;
+    HTag.innerText = `${enemyHealth}`;
+    if (enemyHealth > 0){
+        console.log(`What happened?`);
+    } else if (enemyHealth <= 0){
+        HTag.innerText = `FAINTED`;
+        console.log(`Fainted`);
+    }
+    return enemyHealth
 }
 
-// rest needs to +50 to health when clicked
-function rest(){
-    
+// quick attack needs to -40 to health when clicked
+function quickAttack(){
+    // first, user clicks attack (need to Add Event Listener on page)
+    // We attack so enemy health decreases
+    enemyHealth = enemyHealth - 40;
+    HTag.innerText = `${enemyHealth}`;
+    if (enemyHealth > 0){
+        console.log(`What happened?`);
+    } else if (enemyHealth <= 0){
+        HTag.innerText = `FAINTED`;
+        console.log(`Fainted`);
+    }
+    return enemyHealth
 }
+
+function attackUser(){
+    if(enemyHealth > 0){
+        userHealth = userHealth - 40;
+    }
+    return userHealth
+}
+// setTimeout(attackUser, 2000);
+
 
 let selectionJson = Cookies.get(`pokemonSelection`);
 let selection = JSON.parse(selectionJson);
-
 
 let enemyPoke = {
     name: `Mew`,
     img: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png`,
     health: `200`,
-    attackOptions: [`Tackle`, `Psychic`, `Psybeam`, `Rest`]
 }
 
 // inserting selected pokemon character into battle
+document.getElementById(`charSelect`).insertAdjacentHTML(`afterbegin`, `<img src="${selection.img}" alt="Pokemon"</>`);
 document.getElementById(`charSelect`).insertAdjacentHTML(`afterbegin`, `<h2>${selection.name} </h2>`);
-document.getElementById(`charSelect`).insertAdjacentHTML(`afterbegin`, `<img src="${selection.img}" alt="Pokemone Eevee"</>`);
-document.getElementById(`charSelect`).insertAdjacentHTML(`afterbegin`, `<h3>${selection.health} </h3>`);
+document.getElementById(`charSelect`).insertAdjacentHTML(`afterbegin`, `<h3>HP: ${selection.health} </h3>`);
+
 
 // event listeners for attack & rest buttons
 document.getElementById(`tackle`).addEventListener(`click`, tackleAttack);
 document.getElementById(`thunder`).addEventListener(`click`, thunderAttack);
 document.getElementById(`flamethrower`).addEventListener(`click`, flameAttack);
-document.getElementById(`rest`).addEventListener(`click`, rest);
+document.getElementById(`quickAttack`).addEventListener(`click`, quickAttack);
 
 
 let enemyHealth = enemyPoke.health;
 let userHealth = selection.health;
-let remainEHealth = enemyHealth - 30;
-document.getElementById(`health`).insertAdjacentHTML(`beforeend`, `<p>${remainEHealth}</p>`);
+// enemyHealth = enemyHealth - 30;
+
+let HTag = document.getElementById(`health`);
+// .innerHTML(`<p>${enemyHealth}</p>`);
+
+let userSavedStat = `${userHealth}`;
+let enemySavedStat = `${enemyHealth}`;
+
+Cookies.set(`userBattleProgress`, userSavedStat);
+Cookies.set(`enemyBattleProgress`, enemySavedStat);
