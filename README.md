@@ -1,5 +1,1 @@
 # PokeThon
-
-<!-- Shioban
-Dwayne
-Mahi -->
